@@ -1,0 +1,140 @@
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(5px); }
+}
+
+/* Форма */
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 500px;
+    margin: 0 auto 30px;
+    backdrop-filter: blur(10px);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba1 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.btn-loader {
+    display: none;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Подтверждение */
+.confirmation {
+    background: rgba(46, 204, 113, 0.1);
+    border: 2px dashed #2ecc71;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px auto;
+    max-width: 500px;
+    display: none;
+    text-align: center;
+}
+
+.confirmation h3 {
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.tracking-info {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.tracking-info p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Анимации */
+@keyframes float-envelope {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+.envelope {
+    animation: float-envelope 6s ease-in-out infinite;
+}
+
+.envelope.opening .envelope-flap {
+    transform: rotateX(-180deg);
+}
+
+.paper.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Конфетти */
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: #ff0000;
+    z-index: 9999;
+    pointer-events: none;
+}
