@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Волшебная отправка писем</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>💌 Волшебная почта</h1>
+            <p>Отправьте послание в будущее — оно прилетит точно в срок!</p>
+        </header>
+
+        <div class="envelope-container">
+            <div class="envelope" id="envelope">
+                <div class="envelope-back"></div>
+                <div class="envelope-flap"></div>
+                <div class="paper" id="paper">
+                    <div class="letter-content">
+                        <h3>Ваше послание</h3>
+                        <p id="letter-message">Здесь появится ваше сообщение</p>
+                </div>
+            </div>
+        </div>
+        <div class="stamp">💌</div>
+    </div>
+
+    <form id="emailForm" class="form-container">
+        <div class="form-group">
+            <label for="to">Кому отправить:</label>
+            <input type="email" id="to" placeholder="example@yandex.ru" required>
+        </div>
+
+        <div class="form-group">
+            <label for="subject">Тема письма:</label>
+            <input type="text" id="subject" placeholder="Привет из будущего!" required>
+        </div>
+
+        <div class="form-group">
+            <label for="body">Текст сообщения:</label>
+            <textarea id="body" placeholder="Напишите ваше волшебное послание..." rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="sendDateTime">Когда отправить:</label>
+            <input type="datetime-local" id="sendDateTime" required>
+        </div>
+
+        <button type="submit" id="submitBtn">
+            <span class="btn-text">✉️
